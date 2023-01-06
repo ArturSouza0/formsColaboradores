@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* background-image: url(background.png); */
+    background: rgb(5, 213, 250);
+    background: linear-gradient(90deg, rgba(5, 213, 250, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.w50 {
+    width: 50%;
+    float: left;
+    padding-right: 15px;
+}
+
+.box {
+    display: flex;
+    width: 930px;
+}
+
+.img-box {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px 0 0 20px;
+}
+
+.img-box img {
+    width: 100%;
+    /* height: 100%; */
+}
+
+.form-box {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(40px);
+    padding: 30px 40px;
+    width: 50%;
+    border-radius: 0 20px 20px 0;
+}
+
+.form-box h2 {
+    font-size: 30px;
+    color: #3D3D3D;
+}
+
+.form-box p {
+    font-weight: bold;
+    color: #3D3D3D;
+}
+
+.form-box form {
+    margin: 20px 0;
+}
+
+form .input-group {
+    margin-bottom: 15px;
+}
+
+form .input-group label {
+    color: #3D3D3D;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form .input-group input {
+    width: 100%;
+    height: 47px;
+    background-color: rgba(255, 255, 255, 0.32);
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid transparent;
+    padding: 15px;
+    font-size: 15px;
+    color: #616161;
+    transition: all 0.4s ease;
+}
+
+form .input-group input:focus {
+    border-color: #00008B;
+}
+
+form .input-group button {
+    width: 100%;
+    height: 47px;
+    background: #FF0;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    color: #3D3D3D;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+form .input-group button:focus{
+    background: #FFFF19;
+}
+
+:root {
+    --text-clr: #3d3d3d;
+    --primary-clr: #FF0;
+    --secondary-clr: rgba(255, 255, 255, 0.2);
+    --white: rgba(255, 255, 255, 0.4);
+}
+
+li {
+    list-style-type: none;
+}
+
+.select_wrap .default_option li .option {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: var(--white);
+    width: 100%;
+    height: 45px;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: 0.5s ease;
+}
+
+.select_wrap .default_option li .option .count {
+    font-weight: bold;
+    font-size: 15px;
+    display: none;
+}
+
+.select_wrap .default_option li .option .icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: var(--primary-clr);
+    font-size: 14px;
+    width: 25px;
+    height: 25px;
+    background: var(--secondary-clr);
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+.select_wrap .select_ul {
+    background: var(--secondary-clr);
+    border-radius: 20px;
+    width: 100%;
+    display: none;
+}
+
+.select_wrap .select_ul li .option {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    padding-left: 50px;
+    width: 100%;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.select_wrap .select_ul li:last-child .option {
+    margin-bottom: 0;
+}
+
+.select_wrap .select_ul li .option:hover {
+    background: var(--secondary-clr);
+}
+
+.select_wrap .select_ul li:first-child .option {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.select_wrap .select_ul li:last-child .option {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.select_wrap .select_ul li .option .input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.select_wrap .select_ul li .option .checkmark {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #00008B;
+    border-radius: 20px;
+    transition: 0.5s ease;
+}
+
+.select_wrap .select_ul li .option .checkmark:before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 21px;
+    height: 21px;
+    background: var(--primary-clr);
+    border-radius: 20px;
+    display: none;
+}
+
+.select_wrap .select_ul li .option .checkmark:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    width: 7px;
+    height: 2px;
+    border: 2px solid;
+    border-color: transparent transparent var(--text-clr) var(--text-clr);
+    transform: rotate(-45deg);
+    display: none;
+}
+
+.select_wrap .default_option.active+.select_ul {
+    display: block;
+}
+
+.select_wrap .default_option.active .option,
+.select_wrap .default_option .option:hover {
+    background:var(--secondary-clr);
+    color: var(--white);
+}
+
+.select_wrap .default_option.active .option .icon {
+    transform: rotate(180deg);
+}
+
+
+.select_wrap .select_ul li .option .input:checked~.checkmark:before,
+.select_wrap .select_ul li .option .input:checked~.checkmark:after {
+    display: block;
+}
+
+@media (max-width:930px) {
+    .img-box {
+        display: none;
+    }
+
+    .box {
+        width: 700px;
+    }
+
+    .form-box {
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width:500px) {
+    .w50 {
+        width: 100%;
+        padding: 0;
+    }
+}
